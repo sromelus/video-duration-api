@@ -5,6 +5,7 @@ const { getVideoDurationInSeconds } = require('get-video-duration')
 const multer  = require('multer');
 const path = require('path')
 
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 app.use(bodyParser.json())
@@ -30,4 +31,4 @@ app.post('/api/duration/file', upload.single('file'), (req, res) => {
     });
 })
 
-app.listen(8080, () => { console.log('Server is running on port 8080'); });
+app.listen(PORT, () => { console.log('Server is running on port PORT'); });
