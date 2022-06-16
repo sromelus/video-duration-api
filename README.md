@@ -2,9 +2,9 @@
 
 This a small experimental package to get length of videos.
 
-##To get duration for video url
+## To get duration for video url
 
-###REQUEST sample coode
+### REQUEST sample coode
 
 ```
 fetch('http://localhost:8080/api/duration/url', {
@@ -14,7 +14,7 @@ fetch('http://localhost:8080/api/duration/url', {
 })
 ```
 
-###RESPONSE
+### RESPONSE
 
 ```
 {
@@ -25,9 +25,9 @@ fetch('http://localhost:8080/api/duration/url', {
 
 
 
-##To get duration for video file
+## To get duration for video file
 
-###REQUEST sample coode
+### REQUEST sample coode
 ```
 fetch('http://localhost:8080/api/duration/url', {
     "method": "POST",
@@ -36,7 +36,7 @@ fetch('http://localhost:8080/api/duration/url', {
 })
 ```
 
-###RESPONSE
+### RESPONSE
 ```
 {
   "duration": 20.066667
