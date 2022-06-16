@@ -12,6 +12,10 @@ app.use(bodyParser.json())
 
 const upload = multer({ dest: os.tmpdir() });
 
+app.get('/', async (req, res) => {
+    res.send('video-duration-server is running') 
+})
+
 app.post('/api/duration/url', async (req, res) => {
     const { url } = req.body;
     await getVideoDurationInSeconds(url)
@@ -31,4 +35,4 @@ app.post('/api/duration/file', upload.single('file'), (req, res) => {
     });
 })
 
-app.listen(PORT, () => { console.log('Server is running on port PORT'); });
+app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`); });
